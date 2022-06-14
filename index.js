@@ -11,16 +11,16 @@ var cors = require('cors')
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.send("Culpa do Cliente");
+    res.send("Culpa do Cliente"); //recebe isso do servidor para o cliente
 });
-
+//lista tendo dois json object dentro dela
 const notes = [
     {title : "Primeiro Título", description : "Essa é a primeira Descrição!"},
     {title : "Segundo Título", description : "Culpa do Cliente"}
 ];
 
 
-
+//endpoint =  /notes
 app.get(endpoint, (req, res) => {
     res.send(notes);
 });
